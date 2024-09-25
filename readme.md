@@ -8,7 +8,7 @@ Contributors:
 - Ivana Ivkovic
 - Nikolay Stoyanov Kaleyski 
 
-### Library
+### Dependency
 vbf.h - vectorial boolean function library header
 
 vbf.c - vectorial boolean function library
@@ -74,61 +74,6 @@ _*It is possible to modify the code to return the truth table of L._
 
 ---
 
-### Algorithm 3: Testing additive-equivalence to a quadratic 3-to-1 function with the zero-sum property
-_Check whether a given function F is additive-equivalent to a quadratic 3-to-1 function T with zero-sum property_
-
-alg3.c
-
-**to compile:**
-
-`make alg3`
-
-**or:**
-
-`gcc alg3.c vbf.c -lm -o find_3to1_add_eq_to_f.o`
-
-**to run:**
-
-`./find_3to1_add_eq_to_f.o function.tt`
-
-**result:**
-
-truth table of the 3-to-1 function T such that F + A = T
-
-**or:**
-
-"False"
-
----
-
-### Algorithm 4: Testing additive equivalence to a quadratic 3-to-1 function with the zero-sum and pre-image summation properties
-_Check whether a given function F is additive-equivalent to a quadratic 3-to-1 function T with zero-sum and pre-image summation properties_
-
-alg4.c
-
-**to compile:**
-
-`make alg4`
-
-**or:**
-
-`gcc alg4.c vbf.c -lm -o find_3to1_add_eq_to_f_faster.o`
-
-**to run:**
-
-`./find_3to1_add_eq_to_f_faster.o function.tt`
-
-**result:**
-
-truth table of the 3-to-1 function T such that F + A = T
-
-**or:**
-
-"False"
-
----
-
-
 ## Extra Algorithms
 
 ### Algorithm E1: Finding linear self-equivalence classes of a uniformly distributed 3-to-1 function
@@ -151,51 +96,3 @@ alg_e1.c
 **result:**
 
 truth tables of all the linear functions L1 and L2 such that L1 ◦ C1 ◦ L2 = C1
-
----
-
-### Algorithm E2: Testing additive equivalence to a triplicate function
-_Check whether a given function F is additive-equivalent to a triplicate function T (not necessarily 3-to-1)_
-
-alg_e2.c
-
-**to compile:**
-
-`make alg_e2`
-
-**or:**
-
-`gcc alg_e2.c vbf.c -lm -o check_add_eq_to_triplicate.o`
-
-**to run:**
-
-`./check_add_eq_to_triplicate.o function.tt`
-
-**result:**
-
-truth table of the adjoint L such that F + L = G
-
-**or:**
-
-"False"
-
-### Algorithm E3: Finding the orbits partition for L2
-_Partition the domain of F into right orbits using L2 from self-equivalence classes_
-
-alg_e3.c
-
-**to compile:**
-
-`make alg_e3`
-
-**or:**
-
-`gcc alg_e3.c vbf.c -lm -o partition_by_L2.o`
-
-**to run:**
-
-`./partition_by_L2.o function.tt`
-
-**result:**
-
-Partition into right orbits. Numbers denote the corresponding orbit, while positions of numbers denote the pre-images of F. 
